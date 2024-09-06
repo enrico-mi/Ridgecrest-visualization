@@ -1,6 +1,6 @@
 let graphicSketch = function(p){
 
-    const awsAddress = 'https://ridgecrest-viz.s3.us-east-2.amazonaws.com/';
+    const rootAddress = './';
 
     // trying to scale it to use viewport units in html
     var elementHeight = document.getElementById('heatmap').clientHeight;
@@ -351,7 +351,7 @@ let graphicSketch = function(p){
 	    resString = "Neg" + resolutionCSVList[res];
 	}
 
-	tableName = awsAddress + "SRw/" +  errorTypeCSVList[errType] + errorExpCSVList[errExp] +
+	tableName = rootAddress + "SRw/" +  errorTypeCSVList[errType] + errorExpCSVList[errExp] +
 	    "_mu_N" + orientationCSVList[sHor] +
 	    "E_angles" + anglesCSVList[ang] +
 	    "_res" + resString +
